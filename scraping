@@ -1,0 +1,355 @@
+import requests
+import json
+import time
+from typing import List, Dict, Any
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+class StartupDataExtractor:
+    def __init__(self):
+        self.base_url = "https://api.startupindia.gov.in/sih/api"
+        self.session = requests.Session()
+        self.session.headers.update({
+            'Content-Type': 'application/json',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        })
+        
+    def get_startup_profiles(self, page: int) -> List[Dict[str, Any]]:
+        """
+        Fetch startup profiles for a given page and return complete profile data
+        """
+        url = f"{self.base_url}/noauth/search/profiles"
+        
+        payload = {
+            "badges": [],
+            "cities": [],
+            "dpiitRecogniseUser": True,
+            "focusSector": False,
+            "industries": [],
+            "internationalUser": False,
+            "page": page,
+            "query": "",
+            "roles": ["Startup"],
+            "sectors": [],
+            "sort": {
+                "orders": [
+                    {
+                        "field": "registeredOn",
+                        "direction": "DESC"
+                    }
+                ]
+            },
+            "stages": [],
+            "states": ["5f48ce592a9bb065cdf9fb3b"]
+        }
+        
+        try:
+            response = self.session.post(url, json=payload)
+            response.raise_for_status()
+            
+            data = response.json()
+            
+            # Return complete profile data from the search
+            profiles = []
+            if 'content' in data:
+                profiles = data['content']
+            
+            logger.info(f"Page {page}: Found {len(profiles)} profiles")
+            return profiles
+            
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Error fetching profiles for page {page}: {e}")
+            return []
+        except json.JSONDecodeError as e:
+            logger.error(f"Error parsing JSON response for page {page}: {e}")
+            return []
+    
+    def get_profile_details(self, profile_id: str) -> Dict[str, Any]:
+        """
+        Fetch detailed profile information for a given profile ID
+        """
+        url = f"{self.base_url}/common/replica/user/profile/{profile_id}"
+        
+        try:
+            response = self.session.get(url)
+            response.raise_for_status()
+            
+            data = response.json()
+            logger.info(f"Successfully fetched details for profile {profile_id}")
+            return data
+            
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Error fetching profile details for {profile_id}: {e}")
+            return {}
+        except json.JSONDecodeError as e:
+            logger.error(f"Error parsing JSON response for profile {profile_id}: {e}")
+            return {}
+    
+    def get_cin_info(self, cin: str) -> Dict[str, Any]:
+        """
+        Fetch CIN information and return complete data
+        """
+        url = f"{self.base_url}/noauth/dpiit/services/cin/info"
+        params = {"cin": cin}
+        
+        try:
+            response = self.session.get(url, params=params)
+            response.raise_for_status()
+            
+            data = response.json()
+            logger.info(f"Successfully fetched CIN info for {cin}")
+            return data
+            
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Error fetching CIN info for {cin}: {e}")
+            return {}
+        except json.JSONDecodeError as e:
+            logger.error(f"Error parsing JSON response for CIN {cin}: {e}")
+            return {}
+    
+    def extract_cin_from_profile(self, profile_data: Dict[str, Any]) -> str:
+        """
+        Extract CIN from profile data based on the sample structure provided
+        """
+        try:
+            # Based on the sample response structure: user.startup.cin
+            if 'user' in profile_data and 'startup' in profile_data['user']:
+                cin = profile_data['user']['startup'].get('cin', '')
+                if cin:
+                    return cin
+            
+            # Fallback: Look for CIN in various possible locations
+            cin_fields = ['cin', 'CIN', 'companyIdentificationNumber']
+            
+            for field in cin_fields:
+                if field in profile_data:
+                    return profile_data[field]
+            
+            # Check nested objects
+            if 'company' in profile_data:
+                for field in cin_fields:
+                    if field in profile_data['company']:
+                        return profile_data['company'][field]
+            
+            if 'businessDetails' in profile_data:
+                for field in cin_fields:
+                    if field in profile_data['businessDetails']:
+                        return profile_data['businessDetails'][field]
+            
+            if 'startup' in profile_data:
+                for field in cin_fields:
+                    if field in profile_data['startup']:
+                        return profile_data['startup'][field]
+                        
+        except (KeyError, TypeError) as e:
+            logger.warning(f"Error extracting CIN from profile data: {e}")
+        
+        return ""
+    
+    def process_pages(self, start_page: int = 1, end_page: int = 5, delay: float = 1.0) -> List[Dict[str, Any]]:
+        """
+        Process multiple pages and extract all data from all three APIs
+        
+        Args:
+            start_page: Starting page number
+            end_page: Ending page number (inclusive)
+            delay: Delay between API calls to avoid rate limiting
+        
+        Returns:
+            List of complete startup data dictionaries
+        """
+        all_startup_data = []
+        
+        logger.info(f"Starting data extraction from page {start_page} to {end_page}")
+        
+        for page in range(start_page, end_page + 1):
+            logger.info(f"Processing page {page}")
+            
+            # Step 1: Get all profile data for this page (1st API)
+            profiles = self.get_startup_profiles(page)
+            
+            if not profiles:
+                logger.warning(f"No profiles found for page {page}")
+                continue
+            
+            # Step 2: Process each profile
+            for profile in profiles:
+                profile_id = profile.get('id', '')
+                if not profile_id:
+                    logger.warning("Profile missing ID, skipping")
+                    continue
+                
+                logger.info(f"Processing profile: {profile_id}")
+                
+                # Initialize the complete data structure
+                complete_data = {
+                    'profile_id': profile_id,
+                    'page': page,
+                    'search_profile_data': profile,  # Data from 1st API
+                    'detailed_profile_data': {},     # Data from 2nd API
+                    'cin_data': {},                  # Data from 3rd API
+                    'processing_info': {
+                        'timestamp': time.time(),
+                        'success': False,
+                        'errors': []
+                    }
+                }
+                
+                time.sleep(delay)  # Rate limiting
+                
+                # Step 3: Get detailed profile information (2nd API)
+                detailed_profile = self.get_profile_details(profile_id)
+                
+                if detailed_profile:
+                    complete_data['detailed_profile_data'] = detailed_profile
+                    
+                    # Step 4: Extract CIN from detailed profile
+                    cin = self.extract_cin_from_profile(detailed_profile)
+                    
+                    if cin:
+                        logger.info(f"Found CIN: {cin} for profile {profile_id}")
+                        
+                        time.sleep(delay)  # Rate limiting
+                        
+                        # Step 5: Get CIN information (3rd API)
+                        cin_info = self.get_cin_info(cin)
+                        
+                        if cin_info:
+                            complete_data['cin_data'] = cin_info
+                            complete_data['processing_info']['success'] = True
+                            logger.info(f"Successfully collected all data for profile {profile_id}")
+                        else:
+                            complete_data['processing_info']['errors'].append("Failed to fetch CIN data")
+                            logger.warning(f"Failed to fetch CIN data for {cin}")
+                    else:
+                        complete_data['processing_info']['errors'].append("CIN not found in profile data")
+                        logger.warning(f"No CIN found for profile {profile_id}")
+                else:
+                    complete_data['processing_info']['errors'].append("Failed to fetch detailed profile data")
+                    logger.warning(f"Failed to fetch detailed profile for {profile_id}")
+                
+                # Add to results regardless of success (for debugging purposes)
+                all_startup_data.append(complete_data)
+            
+            logger.info(f"Completed page {page}. Total profiles processed: {len(all_startup_data)}")
+        
+        return all_startup_data
+    
+    def save_to_file(self, data: List[Dict[str, Any]], filename: str = "complete_startup_data.json"):
+        """
+        Save collected data to a JSON file
+        """
+        try:
+            with open(filename, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            logger.info(f"Data saved to {filename}")
+        except Exception as e:
+            logger.error(f"Error saving data to file: {e}")
+    
+    def save_summary(self, data: List[Dict[str, Any]], filename: str = "startup_summary.json"):
+        """
+        Save a summary of the collected data
+        """
+        try:
+            summary = {
+                'total_profiles': len(data),
+                'successful_extractions': len([d for d in data if d['processing_info']['success']]),
+                'failed_extractions': len([d for d in data if not d['processing_info']['success']]),
+                'profiles_with_cin': len([d for d in data if d.get('cin_data')]),
+                'extraction_timestamp': time.time(),
+                'sample_contacts': []
+            }
+            
+            # Add sample contact information
+            for profile in data:
+                if profile['processing_info']['success'] and profile.get('cin_data'):
+                    contact_sample = {
+                        'profile_id': profile['profile_id'],
+                        'company_name': '',
+                        'email': profile['cin_data'].get('email', ''),
+                        'phone': profile['cin_data'].get('registeredContactNo', ''),
+                        'cin': ''
+                    }
+                    
+                    # Try to get company name from detailed profile
+                    if profile.get('detailed_profile_data', {}).get('user', {}).get('startup', {}).get('name'):
+                        contact_sample['company_name'] = profile['detailed_profile_data']['user']['startup']['name']
+                    
+                    # Try to get CIN
+                    if profile.get('detailed_profile_data', {}).get('user', {}).get('startup', {}).get('cin'):
+                        contact_sample['cin'] = profile['detailed_profile_data']['user']['startup']['cin']
+                    
+                    summary['sample_contacts'].append(contact_sample)
+                    
+                    # Limit to first 10 samples
+                    if len(summary['sample_contacts']) >= 10:
+                        break
+            
+            with open(filename, 'w', encoding='utf-8') as f:
+                json.dump(summary, f, indent=2, ensure_ascii=False)
+            logger.info(f"Summary saved to {filename}")
+            
+        except Exception as e:
+            logger.error(f"Error saving summary to file: {e}")
+
+def main():
+    """
+    Main function to run the data extraction
+    """
+    # Configuration - Modify these values as needed
+    START_PAGE = 2
+    END_PAGE = 2  # Adjust based on your needs
+    DELAY_BETWEEN_CALLS = 2.0  # Seconds between API calls
+    OUTPUT_FILE = "complete_startup_data.json"
+    SUMMARY_FILE = "startup_summary.json"
+    
+    # Initialize extractor
+    extractor = StartupDataExtractor()
+    
+    try:
+        # Extract data
+        startup_data = extractor.process_pages(
+            start_page=START_PAGE,
+            end_page=END_PAGE,
+            delay=DELAY_BETWEEN_CALLS
+        )
+        
+        # Display summary
+        successful = len([d for d in startup_data if d['processing_info']['success']])
+        logger.info(f"Data extraction completed!")
+        logger.info(f"Total profiles processed: {len(startup_data)}")
+        logger.info(f"Successful extractions: {successful}")
+        logger.info(f"Failed extractions: {len(startup_data) - successful}")
+        
+        if startup_data:
+            # Save complete data
+            extractor.save_to_file(startup_data, OUTPUT_FILE)
+            
+            # Save summary
+            extractor.save_summary(startup_data, SUMMARY_FILE)
+            
+            # Display sample data
+            logger.info("Sample startup data structure:")
+            if len(startup_data) > 0:
+                sample = startup_data[0]
+                logger.info(f"Profile ID: {sample.get('profile_id', 'N/A')}")
+                logger.info(f"Success: {sample['processing_info']['success']}")
+                logger.info(f"Has detailed data: {bool(sample.get('detailed_profile_data'))}")
+                logger.info(f"Has CIN data: {bool(sample.get('cin_data'))}")
+                
+                if sample.get('cin_data'):
+                    logger.info(f"Sample contact - Email: {sample['cin_data'].get('email', 'N/A')}")
+                    logger.info(f"Sample contact - Phone: {sample['cin_data'].get('registeredContactNo', 'N/A')}")
+        else:
+            logger.warning("No startup data was collected")
+    
+    except KeyboardInterrupt:
+        logger.info("Process interrupted by user")
+    except Exception as e:
+        logger.error(f"Unexpected error: {e}")
+
+if __name__ == "__main__":
+    main()
