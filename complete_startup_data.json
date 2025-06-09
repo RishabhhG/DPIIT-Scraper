@@ -1,0 +1,2058 @@
+[
+  {
+    "profile_id": "682af2f2e4b0cf6e64878ed9",
+    "page": 2,
+    "search_profile_data": {
+      "id": "682af2f2e4b0cf6e64878ed9",
+      "name": "REDFORD ASTRONIX PRIVATE LIMITED",
+      "title": null,
+      "pic": "e8714981-c84b-4e60-ba8f-60fe7a7315e6.jpeg",
+      "companyLogo": true,
+      "role": "Startup",
+      "dippNumber": "DIPP204044",
+      "dippRecognitionStatus": "RECOGNISED",
+      "dippCertified": true,
+      "form56Applied": false,
+      "form56Status": null,
+      "form80IacApplied": false,
+      "form80IacStatus": null,
+      "country": "India",
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "industries": [
+        "Professional & Commercial Services"
+      ],
+      "sectors": [
+        "Others"
+      ],
+      "level": 0,
+      "stages": [
+        "Validation"
+      ],
+      "rating": "0.0",
+      "published": true,
+      "disabled": false,
+      "publishedOn": 1747645170521,
+      "registeredOn": 1747645170499,
+      "department": null,
+      "ministry": null,
+      "score": 1.0,
+      "badges": null,
+      "badgeDetails": null
+    },
+    "detailed_profile_data": {
+      "user": {
+        "uniqueId": "682af2f2e4b0cf6e64878ed9",
+        "email": "XXXXXXX@gmail.com",
+        "phone": "0000000000",
+        "role": "Startup",
+        "name": "REDFORD ASTRONIX PRIVATE LIMITED",
+        "image": "e8714981-c84b-4e60-ba8f-60fe7a7315e6.jpeg",
+        "companyLogo": true,
+        "stateRecognized": null,
+        "migratedUser": false,
+        "coverImage": null,
+        "eventRegId": "OI-0525-9210DD",
+        "gallery": null,
+        "startup": {
+          "name": "REDFORD ASTRONIX PRIVATE LIMITED",
+          "startupEntity": "5f48ce5f2a9bb065cdfa185b",
+          "legalName": "REDFORD ASTRONIX PRIVATE LIMITED",
+          "cin": "U96906TZ2025PTC034666",
+          "pan": "AAOCR6267R",
+          "logo": null,
+          "stage": "Validation",
+          "udyogAadhar": "",
+          "dippCertified": true,
+          "dippNumber": "DIPP204044",
+          "dippRecognitionStatus": "RECOGNISED",
+          "form56Applied": false,
+          "form56Status": null,
+          "form80IacApplied": false,
+          "form80IacStatus": null,
+          "ideaBrief": "At Redford Astronix Private Limited, we are more than a mystical marketplace — we are your spiritual partners. Blending ancient wisdom with modern guidance, we offer expert consultations and sacred products to help you align, heal, and thrive. Our vision is to become the world’s most trusted source for spiritual well-being, empowering individuals to rediscover balance, purpose, and abundance through timeless sciences and authentic tools.\n",
+          "members": null,
+          "enabled": true,
+          "funded": false,
+          "location": {
+            "country": {
+              "id": "5f02e38c6f3de87babe20cd2",
+              "name": null,
+              "text": null,
+              "countryName": "India",
+              "deleted": false
+            },
+            "state": {
+              "id": "5f48ce592a9bb065cdf9fb3b",
+              "name": null,
+              "text": null,
+              "stateName": "Tamil Nadu",
+              "deleted": false,
+              "isUnionTerritory": false
+            },
+            "city": {
+              "id": "5f48ce5a2a9bb065cdf9fd7b",
+              "name": null,
+              "text": null,
+              "districtName": "Coimbatore",
+              "deleted": false,
+              "state": {
+                "id": "5f48ce592a9bb065cdf9fb3b",
+                "name": null,
+                "text": null,
+                "stateName": "Tamil Nadu",
+                "deleted": false,
+                "isUnionTerritory": false
+              },
+              "isActive": true
+            },
+            "cities": null
+          },
+          "focusArea": {
+            "industry": {
+              "id": "5f48ce5f2a9bb065cdfa1752",
+              "name": null,
+              "text": null,
+              "industryName": "Professional & Commercial Services",
+              "orderFlag": 37,
+              "deleted": false
+            },
+            "sectors": [
+              {
+                "id": "5f48d0cb2a9bb065cdfc47d1",
+                "name": null,
+                "text": null,
+                "sectionName": "Others",
+                "orderFlag": null,
+                "deleted": false,
+                "startupIndustry": {
+                  "id": "5f48ce5f2a9bb065cdfa1752",
+                  "name": null,
+                  "text": null,
+                  "industryName": "Professional & Commercial Services",
+                  "orderFlag": 37,
+                  "deleted": false
+                }
+              }
+            ]
+          },
+          "services": [
+            "5f48ce5f2a9bb065cdfa1853"
+          ],
+          "website": "REDFORD ASTRONIX PRIVATE LIMITED",
+          "mobileAppLink": null,
+          "businessPlan": null,
+          "lookingToConnectTo": [
+            "Investor",
+            "Mentor",
+            "Startup",
+            "Incubator",
+            "Accelerator"
+          ],
+          "linkedInUrl": null,
+          "mentorshipParticipant": false,
+          "mentorship": null,
+          "socialInfos": null,
+          "address": null,
+          "interestedArea": null,
+          "startupServices": null,
+          "recognitionFormRequest": {
+            "id": "682af2ffe4b0cf6e64878ee0",
+            "userId": "682af2f2e4b0cf6e64878ed9",
+            "applied": true,
+            "cin": "U96906TZ2025PTC034666",
+            "referenceNo": "P190525203277",
+            "reg_id": "682af2fa8d91842847490d38",
+            "lastAccordionSaved": null,
+            "isUpdatedByScheduler": null,
+            "isCheckedByScheduler": true,
+            "form80id": null,
+            "form56id": null
+          }
+        },
+        "switchedUser": false
+      },
+      "points": 40,
+      "numberOfConnection": 0,
+      "connectionStatus": {
+        "connected": false,
+        "connectionAllowed": false,
+        "connectionSent": false,
+        "connectionRecieved": false,
+        "weeklyThresholdReached": false
+      },
+      "createdOn": 1747645170499,
+      "lastUpdatedOn": null,
+      "lastPublishedOn": 1748601720049,
+      "autoEnableOn": null,
+      "disabledOn": null,
+      "rejectedOn": null,
+      "badges": [
+        "CIN_CERTIFIED"
+      ],
+      "assignedBadges": [],
+      "allowProfileEdit": false,
+      "published": false,
+      "passwordKey": false,
+      "eventRegId": "OI-0525-9210DD"
+    },
+    "cin_data": {
+      "status": true,
+      "message": "Valid cin",
+      "data": {
+        "cin": "U96906TZ2025PTC034666",
+        "companyName": "REDFORD ASTRONIX PRIVATE LIMITED",
+        "companyStatus": "Active",
+        "email": "redfordastronix@gmail.com",
+        "financialAuditStatus": "null",
+        "financialDetails": [
+          {
+            "profitLoss": "null",
+            "turnOver": "null",
+            "year": "null"
+          }
+        ],
+        "incorpdate": "08-05-2025",
+        "registeredAddress": "A604, Chettinad Burgundy",
+        "registeredContactNo": "9616196116",
+        "isValidIncorporationNo": true,
+        "message": "MCA details fetched successfully",
+        "status": "true"
+      },
+      "rpCount": 0
+    },
+    "processing_info": {
+      "timestamp": 1749453262.8246295,
+      "success": true,
+      "errors": []
+    }
+  },
+  {
+    "profile_id": "682ae96ce4b0cf6e648789b6",
+    "page": 2,
+    "search_profile_data": {
+      "id": "682ae96ce4b0cf6e648789b6",
+      "name": "ARGUS FINTECH PRIVATE LIMITED",
+      "title": null,
+      "pic": "940639f9-fc64-4950-b9ca-e1e3f89c3d1c.png",
+      "companyLogo": true,
+      "role": "Startup",
+      "dippNumber": "DIPP204031",
+      "dippRecognitionStatus": "RECOGNISED",
+      "dippCertified": true,
+      "form56Applied": false,
+      "form56Status": null,
+      "form80IacApplied": false,
+      "form80IacStatus": null,
+      "country": "India",
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "industries": [
+        "Finance Technology"
+      ],
+      "sectors": [
+        "Advisory"
+      ],
+      "level": 0,
+      "stages": [
+        "Prototype"
+      ],
+      "rating": "0.0",
+      "published": true,
+      "disabled": false,
+      "publishedOn": 1747642732032,
+      "registeredOn": 1747642732009,
+      "department": null,
+      "ministry": null,
+      "score": 1.0,
+      "badges": null,
+      "badgeDetails": null
+    },
+    "detailed_profile_data": {
+      "user": {
+        "uniqueId": "682ae96ce4b0cf6e648789b6",
+        "email": "XXXXXXX@gmail.com",
+        "phone": "0000000000",
+        "role": "Startup",
+        "name": "ARGUS FINTECH PRIVATE LIMITED",
+        "image": "940639f9-fc64-4950-b9ca-e1e3f89c3d1c.png",
+        "companyLogo": true,
+        "stateRecognized": null,
+        "migratedUser": false,
+        "coverImage": null,
+        "eventRegId": "OI-0525-9210BX",
+        "gallery": null,
+        "startup": {
+          "name": "ARGUS FINTECH PRIVATE LIMITED",
+          "startupEntity": "5f48ce5f2a9bb065cdfa185b",
+          "legalName": "ARGUS FINTECH PRIVATE LIMITED",
+          "cin": "U66190TZ2025PTC034344",
+          "pan": "ABCCA6468Q",
+          "logo": null,
+          "stage": "Prototype",
+          "udyogAadhar": "",
+          "dippCertified": true,
+          "dippNumber": "DIPP204031",
+          "dippRecognitionStatus": "RECOGNISED",
+          "form56Applied": false,
+          "form56Status": null,
+          "form80IacApplied": false,
+          "form80IacStatus": null,
+          "ideaBrief": "We empower financial advisors with innovative technology that enhances efficiency, improves client engagement, and drives data-driven decision-making. Our solutions streamline workflows, ensure compliance, and deliver advanced analytics — enabling advisors to provide superior financial services with confidence.",
+          "members": null,
+          "enabled": true,
+          "funded": false,
+          "location": {
+            "country": {
+              "id": "5f02e38c6f3de87babe20cd2",
+              "name": null,
+              "text": null,
+              "countryName": "India",
+              "deleted": false
+            },
+            "state": {
+              "id": "5f48ce592a9bb065cdf9fb3b",
+              "name": null,
+              "text": null,
+              "stateName": "Tamil Nadu",
+              "deleted": false,
+              "isUnionTerritory": false
+            },
+            "city": {
+              "id": "5f48ce5a2a9bb065cdf9fd7b",
+              "name": null,
+              "text": null,
+              "districtName": "Coimbatore",
+              "deleted": false,
+              "state": {
+                "id": "5f48ce592a9bb065cdf9fb3b",
+                "name": null,
+                "text": null,
+                "stateName": "Tamil Nadu",
+                "deleted": false,
+                "isUnionTerritory": false
+              },
+              "isActive": true
+            },
+            "cities": null
+          },
+          "focusArea": {
+            "industry": {
+              "id": "5f48ce5f2a9bb065cdfa1747",
+              "name": null,
+              "text": null,
+              "industryName": "Finance Technology",
+              "orderFlag": 18,
+              "deleted": false
+            },
+            "sectors": [
+              {
+                "id": "5f48ce5f2a9bb065cdfa17d6",
+                "name": null,
+                "text": null,
+                "sectionName": "Advisory",
+                "orderFlag": 70,
+                "deleted": false,
+                "startupIndustry": {
+                  "id": "5f48ce5f2a9bb065cdfa1747",
+                  "name": null,
+                  "text": null,
+                  "industryName": "Finance Technology",
+                  "orderFlag": 18,
+                  "deleted": false
+                }
+              }
+            ]
+          },
+          "services": [
+            "5f48ce5f2a9bb065cdfa1856",
+            "5f48ce5f2a9bb065cdfa1844"
+          ],
+          "website": "www.argusfintech.com",
+          "mobileAppLink": null,
+          "businessPlan": null,
+          "lookingToConnectTo": [
+            "Investor",
+            "Mentor",
+            "Startup",
+            "Incubator",
+            "Accelerator"
+          ],
+          "linkedInUrl": null,
+          "mentorshipParticipant": false,
+          "mentorship": null,
+          "socialInfos": null,
+          "address": null,
+          "interestedArea": null,
+          "startupServices": null,
+          "recognitionFormRequest": {
+            "id": "682ae977e4b0cf6e648789bb",
+            "userId": "682ae96ce4b0cf6e648789b6",
+            "applied": true,
+            "cin": "U66190TZ2025PTC034344",
+            "referenceNo": "P190525203264",
+            "reg_id": "682ae972d2010a36cef7291d",
+            "lastAccordionSaved": null,
+            "isUpdatedByScheduler": null,
+            "isCheckedByScheduler": true,
+            "form80id": null,
+            "form56id": null
+          }
+        },
+        "switchedUser": false
+      },
+      "points": 40,
+      "numberOfConnection": 0,
+      "connectionStatus": {
+        "connected": false,
+        "connectionAllowed": false,
+        "connectionSent": false,
+        "connectionRecieved": false,
+        "weeklyThresholdReached": false
+      },
+      "createdOn": 1747642732009,
+      "lastUpdatedOn": null,
+      "lastPublishedOn": 1748522680549,
+      "autoEnableOn": null,
+      "disabledOn": null,
+      "rejectedOn": null,
+      "badges": [
+        "CIN_CERTIFIED"
+      ],
+      "assignedBadges": [],
+      "allowProfileEdit": false,
+      "published": false,
+      "passwordKey": false,
+      "eventRegId": "OI-0525-9210BX"
+    },
+    "cin_data": {
+      "status": true,
+      "message": "Valid cin",
+      "data": {
+        "cin": "U66190TZ2025PTC034344",
+        "companyName": "ARGUS FINTECH PRIVATE LIMITED",
+        "companyStatus": "Active",
+        "email": "argusfintech@gmail.com",
+        "financialAuditStatus": "null",
+        "financialDetails": [
+          {
+            "profitLoss": "null",
+            "turnOver": "null",
+            "year": "null"
+          }
+        ],
+        "incorpdate": "11-04-2025",
+        "registeredAddress": "88/2, Century Plaza",
+        "registeredContactNo": "7019564690",
+        "isValidIncorporationNo": true,
+        "message": "MCA details fetched successfully",
+        "status": "true"
+      },
+      "rpCount": 0
+    },
+    "processing_info": {
+      "timestamp": 1749453267.9335034,
+      "success": true,
+      "errors": []
+    }
+  },
+  {
+    "profile_id": "682a8c48e4b0cf6e648768a5",
+    "page": 2,
+    "search_profile_data": {
+      "id": "682a8c48e4b0cf6e648768a5",
+      "name": "THAAL INNOVATIONS PRIVATE LIMITED",
+      "title": null,
+      "pic": "81541211-5f52-4739-93dd-7570da496dd4.jpg",
+      "companyLogo": true,
+      "role": "Startup",
+      "dippNumber": "DIPP204002",
+      "dippRecognitionStatus": "RECOGNISED",
+      "dippCertified": true,
+      "form56Applied": false,
+      "form56Status": null,
+      "form80IacApplied": false,
+      "form80IacStatus": null,
+      "country": "India",
+      "state": "Tamil Nadu",
+      "city": "Kanchipuram",
+      "industries": [
+        "Waste Management"
+      ],
+      "sectors": [
+        "Others"
+      ],
+      "level": 0,
+      "stages": [
+        "Scaling"
+      ],
+      "rating": "0.0",
+      "published": true,
+      "disabled": false,
+      "publishedOn": 1747618888772,
+      "registeredOn": 1747618888750,
+      "department": null,
+      "ministry": null,
+      "score": 1.0,
+      "badges": null,
+      "badgeDetails": null
+    },
+    "detailed_profile_data": {
+      "user": {
+        "uniqueId": "682a8c48e4b0cf6e648768a5",
+        "email": "XXXXXXX@gmail.com",
+        "phone": "0000000000",
+        "role": "Startup",
+        "name": "THAAL INNOVATIONS PRIVATE LIMITED",
+        "image": "81541211-5f52-4739-93dd-7570da496dd4.jpg",
+        "companyLogo": true,
+        "stateRecognized": null,
+        "migratedUser": false,
+        "coverImage": null,
+        "eventRegId": "OI-0525-9209XJ",
+        "gallery": null,
+        "startup": {
+          "name": "THAAL INNOVATIONS PRIVATE LIMITED",
+          "startupEntity": "5f48ce5f2a9bb065cdfa185b",
+          "legalName": "THAAL INNOVATIONS PRIVATE LIMITED",
+          "cin": "U22208TN2024PTC169382",
+          "pan": "AAKCT9202G",
+          "logo": null,
+          "stage": "Scaling",
+          "udyogAadhar": "",
+          "dippCertified": true,
+          "dippNumber": "DIPP204002",
+          "dippRecognitionStatus": "RECOGNISED",
+          "form56Applied": false,
+          "form56Status": null,
+          "form80IacApplied": false,
+          "form80IacStatus": null,
+          "ideaBrief": "Thaal Innovations Pvt Ltd, \nThaal Innovations: Transforming Waste into Strength\n\nIn the bustling innovation hub of Chennai, a new startup is poised to revolutionize the world of sustainable materials. Thaal Innovations, a pioneering company, is making waves with its groundbreaking approach to recycling polyurethane foam – a material notorious for its environmental persistence. At the helm is a distinguished doctoral graduate from IIT Madras, whose extensive research has culminated in a unique additive capable of dramatically enhancing the mechanical strength and thermal conductivity of rigid polyurethane foam.\n\nThaal Innovations isn't just about recycling; it's about re-engineering. By transforming a challenging waste product into a high-performance material, the company is not only addressing critical environmental concerns but also offering a superior solution for various industries. This innovative stride promises to unlock new possibilities for sustainable manufacturing, setting a powerful precedent for how we view and utilize waste in the 21st century.  \nit is also focsed to transforming agricultural residues into high-value, sustainable materials. Our flagship product, nano-cellulose, is derived from these residues, offering an eco-friendly alternative for various applications.",
+          "members": null,
+          "enabled": true,
+          "funded": true,
+          "location": {
+            "country": {
+              "id": "5f02e38c6f3de87babe20cd2",
+              "name": null,
+              "text": null,
+              "countryName": "India",
+              "deleted": false
+            },
+            "state": {
+              "id": "5f48ce592a9bb065cdf9fb3b",
+              "name": null,
+              "text": null,
+              "stateName": "Tamil Nadu",
+              "deleted": false,
+              "isUnionTerritory": false
+            },
+            "city": {
+              "id": "5f48ce5a2a9bb065cdf9fd80",
+              "name": null,
+              "text": null,
+              "districtName": "Kanchipuram",
+              "deleted": false,
+              "state": {
+                "id": "5f48ce592a9bb065cdf9fb3b",
+                "name": null,
+                "text": null,
+                "stateName": "Tamil Nadu",
+                "deleted": false,
+                "isUnionTerritory": false
+              },
+              "isActive": true
+            },
+            "cities": null
+          },
+          "focusArea": {
+            "industry": {
+              "id": "5f48d0ca2a9bb065cdfc47b3",
+              "name": null,
+              "text": null,
+              "industryName": "Waste Management",
+              "orderFlag": 54,
+              "deleted": false
+            },
+            "sectors": [
+              {
+                "id": "5f48d0cb2a9bb065cdfc47e3",
+                "name": null,
+                "text": null,
+                "sectionName": "Others",
+                "orderFlag": null,
+                "deleted": false,
+                "startupIndustry": {
+                  "id": "5f48d0ca2a9bb065cdfc47b3",
+                  "name": null,
+                  "text": null,
+                  "industryName": "Waste Management",
+                  "orderFlag": 54,
+                  "deleted": false
+                }
+              }
+            ]
+          },
+          "services": [
+            "5f48ce5f2a9bb065cdfa184d"
+          ],
+          "website": "www.thaal.org.in",
+          "mobileAppLink": null,
+          "businessPlan": null,
+          "lookingToConnectTo": [
+            "Investor",
+            "Mentor",
+            "Incubator",
+            "Accelerator",
+            "Startup"
+          ],
+          "linkedInUrl": null,
+          "mentorshipParticipant": false,
+          "mentorship": null,
+          "socialInfos": null,
+          "address": null,
+          "interestedArea": null,
+          "startupServices": null,
+          "recognitionFormRequest": {
+            "id": "682a8c55e4b0cf6e648768aa",
+            "userId": "682a8c48e4b0cf6e648768a5",
+            "applied": true,
+            "cin": "U22208TN2024PTC169382",
+            "referenceNo": "P190525203236",
+            "reg_id": "682a8c4f8d918428474905af",
+            "lastAccordionSaved": null,
+            "isUpdatedByScheduler": null,
+            "isCheckedByScheduler": true,
+            "form80id": null,
+            "form56id": null
+          }
+        },
+        "switchedUser": false
+      },
+      "points": 40,
+      "numberOfConnection": 0,
+      "connectionStatus": {
+        "connected": false,
+        "connectionAllowed": false,
+        "connectionSent": false,
+        "connectionRecieved": false,
+        "weeklyThresholdReached": false
+      },
+      "createdOn": 1747618888750,
+      "lastUpdatedOn": null,
+      "lastPublishedOn": 1747743702176,
+      "autoEnableOn": null,
+      "disabledOn": null,
+      "rejectedOn": null,
+      "badges": [
+        "CIN_CERTIFIED"
+      ],
+      "assignedBadges": [],
+      "allowProfileEdit": false,
+      "published": false,
+      "passwordKey": false,
+      "eventRegId": "OI-0525-9209XJ"
+    },
+    "cin_data": {
+      "status": true,
+      "message": "Valid cin",
+      "data": {
+        "cin": "U22208TN2024PTC169382",
+        "companyName": "THAAL INNOVATIONS PRIVATE LIMITED",
+        "companyStatus": "Active",
+        "email": "admin@thaalinnovations.com",
+        "financialAuditStatus": "null",
+        "financialDetails": [
+          {
+            "profitLoss": "null",
+            "turnOver": "null",
+            "year": "null"
+          }
+        ],
+        "incorpdate": "12-04-2024",
+        "registeredAddress": "H 402, Casagrande, Zenith, 4th Floor",
+        "registeredContactNo": "9940108670",
+        "isValidIncorporationNo": true,
+        "message": "MCA details fetched successfully",
+        "status": "true"
+      },
+      "rpCount": 0
+    },
+    "processing_info": {
+      "timestamp": 1749453273.0101612,
+      "success": true,
+      "errors": []
+    }
+  },
+  {
+    "profile_id": "6829ba4ce4b0cf6e64874f2a",
+    "page": 2,
+    "search_profile_data": {
+      "id": "6829ba4ce4b0cf6e64874f2a",
+      "name": "PIAX LIFE PRIVATE LIMITED",
+      "title": null,
+      "pic": "ec7b1bd8-e360-4a95-93ec-c08c11564c75.png",
+      "companyLogo": true,
+      "role": "Startup",
+      "dippNumber": "DIPP203987",
+      "dippRecognitionStatus": "RECOGNISED",
+      "dippCertified": true,
+      "form56Applied": false,
+      "form56Status": null,
+      "form80IacApplied": false,
+      "form80IacStatus": null,
+      "country": "India",
+      "state": "Tamil Nadu",
+      "city": "Ranipet",
+      "industries": [
+        "Healthcare & Lifesciences"
+      ],
+      "sectors": [
+        "Health & Wellness"
+      ],
+      "level": 0,
+      "stages": [
+        "Validation"
+      ],
+      "rating": "0.0",
+      "published": true,
+      "disabled": false,
+      "publishedOn": 1747565132048,
+      "registeredOn": 1747565132027,
+      "department": null,
+      "ministry": null,
+      "score": 1.0,
+      "badges": null,
+      "badgeDetails": null
+    },
+    "detailed_profile_data": {
+      "user": {
+        "uniqueId": "6829ba4ce4b0cf6e64874f2a",
+        "email": "XXXXXXX@gmail.com",
+        "phone": "0000000000",
+        "role": "Startup",
+        "name": "PIAX LIFE PRIVATE LIMITED",
+        "image": "ec7b1bd8-e360-4a95-93ec-c08c11564c75.png",
+        "companyLogo": true,
+        "stateRecognized": null,
+        "migratedUser": false,
+        "coverImage": null,
+        "eventRegId": "OI-0525-9209TI",
+        "gallery": null,
+        "startup": {
+          "name": "PIAX LIFE PRIVATE LIMITED",
+          "startupEntity": "5f48ce5f2a9bb065cdfa185b",
+          "legalName": "PIAX LIFE PRIVATE LIMITED",
+          "cin": "U47912TN2025PTC179253",
+          "pan": "AAPCP6545F",
+          "logo": null,
+          "stage": "Validation",
+          "udyogAadhar": "UDYAM-TN-35-0030620",
+          "dippCertified": true,
+          "dippNumber": "DIPP203987",
+          "dippRecognitionStatus": "RECOGNISED",
+          "form56Applied": false,
+          "form56Status": null,
+          "form80IacApplied": false,
+          "form80IacStatus": null,
+          "ideaBrief": "PIAX is a sustainable personal care startup offering eco-friendly menstrual hygiene products and a supportive digital platform. Our initial focus is on launching ultra-thin, highly absorbent, perfume-free, and compostable sanitary pads made using bamboo fiber. Alongside the product, we are developing a mobile app to promote menstrual health awareness, provide tracking tools, and connect users with relevant resources. Founded by student entrepreneurs from Tamil Nadu, PIAX combines comfort, health, and environmental responsibility to create a meaningful impact.",
+          "members": null,
+          "enabled": true,
+          "funded": false,
+          "location": {
+            "country": {
+              "id": "5f02e38c6f3de87babe20cd2",
+              "name": null,
+              "text": null,
+              "countryName": "India",
+              "deleted": false
+            },
+            "state": {
+              "id": "5f48ce592a9bb065cdf9fb3b",
+              "name": null,
+              "text": null,
+              "stateName": "Tamil Nadu",
+              "deleted": false,
+              "isUnionTerritory": false
+            },
+            "city": {
+              "id": "5f48d0ca2a9bb065cdfc4693",
+              "name": null,
+              "text": null,
+              "districtName": "Ranipet",
+              "deleted": false,
+              "state": {
+                "id": "5f48ce592a9bb065cdf9fb3b",
+                "name": null,
+                "text": null,
+                "stateName": "Tamil Nadu",
+                "deleted": false,
+                "isUnionTerritory": false
+              },
+              "isActive": true
+            },
+            "cities": null
+          },
+          "focusArea": {
+            "industry": {
+              "id": "5f48ce5f2a9bb065cdfa174a",
+              "name": null,
+              "text": null,
+              "industryName": "Healthcare & Lifesciences",
+              "orderFlag": 26,
+              "deleted": false
+            },
+            "sectors": [
+              {
+                "id": "5f48ce5f2a9bb065cdfa17e5",
+                "name": null,
+                "text": null,
+                "sectionName": "Health & Wellness",
+                "orderFlag": 85,
+                "deleted": false,
+                "startupIndustry": {
+                  "id": "5f48ce5f2a9bb065cdfa174a",
+                  "name": null,
+                  "text": null,
+                  "industryName": "Healthcare & Lifesciences",
+                  "orderFlag": 26,
+                  "deleted": false
+                }
+              }
+            ]
+          },
+          "services": [
+            "5f48ce5f2a9bb065cdfa184d",
+            "5f48ce5f2a9bb065cdfa1847",
+            "5f48ce5f2a9bb065cdfa185a",
+            "5f48ce5f2a9bb065cdfa1853"
+          ],
+          "website": "https://piax.co.in/",
+          "mobileAppLink": {
+            "android": "9360086901"
+          },
+          "businessPlan": null,
+          "lookingToConnectTo": [
+            "Investor",
+            "Mentor",
+            "Incubator",
+            "Accelerator"
+          ],
+          "linkedInUrl": null,
+          "mentorshipParticipant": false,
+          "mentorship": null,
+          "socialInfos": null,
+          "address": null,
+          "interestedArea": null,
+          "startupServices": null,
+          "recognitionFormRequest": {
+            "id": "6829ba58e4b0cf6e64874f2e",
+            "userId": "6829ba4ce4b0cf6e64874f2a",
+            "applied": true,
+            "cin": "U47912TN2025PTC179253",
+            "referenceNo": "P180525203221",
+            "reg_id": "6829ba52d2010a36cef7218d",
+            "lastAccordionSaved": null,
+            "isUpdatedByScheduler": null,
+            "isCheckedByScheduler": true,
+            "form80id": null,
+            "form56id": null
+          }
+        },
+        "switchedUser": false
+      },
+      "points": 40,
+      "numberOfConnection": 0,
+      "connectionStatus": {
+        "connected": false,
+        "connectionAllowed": false,
+        "connectionSent": false,
+        "connectionRecieved": false,
+        "weeklyThresholdReached": false
+      },
+      "createdOn": 1747565132027,
+      "lastUpdatedOn": null,
+      "lastPublishedOn": 1747709559682,
+      "autoEnableOn": null,
+      "disabledOn": null,
+      "rejectedOn": null,
+      "badges": [
+        "CIN_CERTIFIED"
+      ],
+      "assignedBadges": [],
+      "allowProfileEdit": false,
+      "published": false,
+      "passwordKey": false,
+      "eventRegId": "OI-0525-9209TI"
+    },
+    "cin_data": {
+      "status": true,
+      "message": "Valid cin",
+      "data": {
+        "cin": "U47912TN2025PTC179253",
+        "companyName": "PIAX LIFE PRIVATE LIMITED",
+        "companyStatus": "Active",
+        "email": "contact@piax.co.in",
+        "financialAuditStatus": "null",
+        "financialDetails": [
+          {
+            "profitLoss": "null",
+            "turnOver": "null",
+            "year": "null"
+          }
+        ],
+        "incorpdate": "11-04-2025",
+        "registeredAddress": "No,6, Gandhi Nagar",
+        "registeredContactNo": "9360086901",
+        "isValidIncorporationNo": true,
+        "message": "MCA details fetched successfully",
+        "status": "true"
+      },
+      "rpCount": 0
+    },
+    "processing_info": {
+      "timestamp": 1749453278.0590057,
+      "success": true,
+      "errors": []
+    }
+  },
+  {
+    "profile_id": "6825de24e4b025b6b8a80147",
+    "page": 2,
+    "search_profile_data": {
+      "id": "6825de24e4b025b6b8a80147",
+      "name": "UZHAVAN BIOSCIENCES PRIVATE LIMITED",
+      "title": null,
+      "pic": "61f2d8ae-8981-4037-88f7-4865fc17cbba.jpg",
+      "companyLogo": true,
+      "role": "Startup",
+      "dippNumber": "DIPP203641",
+      "dippRecognitionStatus": "RECOGNISED",
+      "dippCertified": true,
+      "form56Applied": false,
+      "form56Status": null,
+      "form80IacApplied": false,
+      "form80IacStatus": null,
+      "country": "India",
+      "state": "Tamil Nadu",
+      "city": "Dindigul",
+      "industries": [
+        "Agriculture"
+      ],
+      "sectors": [
+        "Others"
+      ],
+      "level": 0,
+      "stages": [
+        "EarlyTraction"
+      ],
+      "rating": "0.0",
+      "published": true,
+      "disabled": false,
+      "publishedOn": 1747312164797,
+      "registeredOn": 1747312164755,
+      "department": null,
+      "ministry": null,
+      "score": 1.0,
+      "badges": null,
+      "badgeDetails": null
+    },
+    "detailed_profile_data": {
+      "user": {
+        "uniqueId": "6825de24e4b025b6b8a80147",
+        "email": "XXXXXXX@gmail.com",
+        "phone": "0000000000",
+        "role": "Startup",
+        "name": "UZHAVAN BIOSCIENCES PRIVATE LIMITED",
+        "image": "61f2d8ae-8981-4037-88f7-4865fc17cbba.jpg",
+        "companyLogo": true,
+        "stateRecognized": null,
+        "migratedUser": false,
+        "coverImage": null,
+        "eventRegId": "OI-0525-9207RQ",
+        "gallery": null,
+        "startup": {
+          "name": "UZHAVAN BIOSCIENCES PRIVATE LIMITED",
+          "startupEntity": "5f48ce5f2a9bb065cdfa185b",
+          "legalName": "UZHAVAN BIOSCIENCES PRIVATE LIMITED",
+          "cin": "U20129TZ2025PTC033315",
+          "pan": "AADCU7282L",
+          "logo": null,
+          "stage": "EarlyTraction",
+          "udyogAadhar": "",
+          "dippCertified": true,
+          "dippNumber": "DIPP203641",
+          "dippRecognitionStatus": "RECOGNISED",
+          "form56Applied": false,
+          "form56Status": null,
+          "form80IacApplied": false,
+          "form80IacStatus": null,
+          "ideaBrief": "Focus on Sustainable Practices &amp; Environmental Benefits.\nOur product directly supports sustainable agriculture by improving soil health with organic amendments,\nreducing water consumption through precision irrigation technology, and minimizing pesticide use through\nintegrated pest management.\nThese sustainable practices provide specific environmental benefits such as conserving water resources,\nreducing soil erosion, and protecting biodiversity. By implementing these eco-friendly strategies, we not only\nreduce the environmental footprint of agriculture but also contribute to the long-term viability and resilience of\nour agricultural systems.\nThis commitment to sustainability aligns with the growing global environmental awareness and strengthens\nour position for potential future market advantages. Uzhavan Biosciences Private Limited remains dedicated\nto promoting responsible, innovative, and sustainable agricultural solutions.",
+          "members": null,
+          "enabled": true,
+          "funded": false,
+          "location": {
+            "country": {
+              "id": "5f02e38c6f3de87babe20cd2",
+              "name": null,
+              "text": null,
+              "countryName": "India",
+              "deleted": false
+            },
+            "state": {
+              "id": "5f48ce592a9bb065cdf9fb3b",
+              "name": null,
+              "text": null,
+              "stateName": "Tamil Nadu",
+              "deleted": false,
+              "isUnionTerritory": false
+            },
+            "city": {
+              "id": "5f48ce5a2a9bb065cdf9fd7e",
+              "name": null,
+              "text": null,
+              "districtName": "Dindigul",
+              "deleted": false,
+              "state": {
+                "id": "5f48ce592a9bb065cdf9fb3b",
+                "name": null,
+                "text": null,
+                "stateName": "Tamil Nadu",
+                "deleted": false,
+                "isUnionTerritory": false
+              },
+              "isActive": true
+            },
+            "cities": null
+          },
+          "focusArea": {
+            "industry": {
+              "id": "5f48ce5f2a9bb065cdfa1732",
+              "name": null,
+              "text": null,
+              "industryName": "Agriculture",
+              "orderFlag": 12,
+              "deleted": false
+            },
+            "sectors": [
+              {
+                "id": "5f48d0cb2a9bb065cdfc47df",
+                "name": null,
+                "text": null,
+                "sectionName": "Others",
+                "orderFlag": null,
+                "deleted": false,
+                "startupIndustry": {
+                  "id": "5f48ce5f2a9bb065cdfa1732",
+                  "name": null,
+                  "text": null,
+                  "industryName": "Agriculture",
+                  "orderFlag": 12,
+                  "deleted": false
+                }
+              }
+            ]
+          },
+          "services": [
+            "5f48ce5f2a9bb065cdfa184d"
+          ],
+          "website": "https://maps.app.goo.gl/LwXG864388ZSrcC2A?g_st=aw",
+          "mobileAppLink": null,
+          "businessPlan": null,
+          "lookingToConnectTo": [
+            "Mentor"
+          ],
+          "linkedInUrl": null,
+          "mentorshipParticipant": false,
+          "mentorship": null,
+          "socialInfos": null,
+          "address": null,
+          "interestedArea": null,
+          "startupServices": null,
+          "recognitionFormRequest": {
+            "id": "6825de2ee4b025b6b8a8014a",
+            "userId": "6825de24e4b025b6b8a80147",
+            "applied": true,
+            "cin": "U20129TZ2025PTC033315",
+            "referenceNo": "P150525202869",
+            "reg_id": "6825de299fe20c5238f0496c",
+            "lastAccordionSaved": null,
+            "isUpdatedByScheduler": null,
+            "isCheckedByScheduler": true,
+            "form80id": null,
+            "form56id": null
+          }
+        },
+        "switchedUser": false
+      },
+      "points": 40,
+      "numberOfConnection": 0,
+      "connectionStatus": {
+        "connected": false,
+        "connectionAllowed": false,
+        "connectionSent": false,
+        "connectionRecieved": false,
+        "weeklyThresholdReached": false
+      },
+      "createdOn": 1747312164755,
+      "lastUpdatedOn": null,
+      "lastPublishedOn": 1747991458418,
+      "autoEnableOn": null,
+      "disabledOn": null,
+      "rejectedOn": null,
+      "badges": [
+        "CIN_CERTIFIED"
+      ],
+      "assignedBadges": [],
+      "allowProfileEdit": false,
+      "published": false,
+      "passwordKey": false,
+      "eventRegId": "OI-0525-9207RQ"
+    },
+    "cin_data": {
+      "status": true,
+      "message": "Valid cin",
+      "data": {
+        "cin": "U20129TZ2025PTC033315",
+        "companyName": "UZHAVAN BIOSCIENCES PRIVATE LIMITED",
+        "companyStatus": "Active",
+        "email": "uzhavanbiosciencesprivatelimit@gmail.com",
+        "financialAuditStatus": "null",
+        "financialDetails": [
+          {
+            "profitLoss": "null",
+            "turnOver": "null",
+            "year": "null"
+          }
+        ],
+        "incorpdate": "09-01-2025",
+        "registeredAddress": "99/1A, KTS ARAVINTH NAGAR",
+        "registeredContactNo": "8072922009",
+        "isValidIncorporationNo": true,
+        "message": "MCA details fetched successfully",
+        "status": "true"
+      },
+      "rpCount": 0
+    },
+    "processing_info": {
+      "timestamp": 1749453283.0932677,
+      "success": true,
+      "errors": []
+    }
+  },
+  {
+    "profile_id": "6825bc7ce4b025b6b8a7f068",
+    "page": 2,
+    "search_profile_data": {
+      "id": "6825bc7ce4b025b6b8a7f068",
+      "name": "RAUL CLOTHING LLP",
+      "title": null,
+      "pic": "e1c96a67-1649-49c0-9148-424f07333cf9.png",
+      "companyLogo": true,
+      "role": "Startup",
+      "dippNumber": "DIPP203597",
+      "dippRecognitionStatus": "RECOGNISED",
+      "dippCertified": true,
+      "form56Applied": false,
+      "form56Status": null,
+      "form80IacApplied": false,
+      "form80IacStatus": null,
+      "country": "India",
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "industries": [
+        "Fashion"
+      ],
+      "sectors": [
+        "Apparel"
+      ],
+      "level": 0,
+      "stages": [
+        "Validation"
+      ],
+      "rating": "0.0",
+      "published": true,
+      "disabled": false,
+      "publishedOn": 1747303548284,
+      "registeredOn": 1747303548256,
+      "department": null,
+      "ministry": null,
+      "score": 1.0,
+      "badges": null,
+      "badgeDetails": null
+    },
+    "detailed_profile_data": {
+      "user": {
+        "uniqueId": "6825bc7ce4b025b6b8a7f068",
+        "email": "XXXXXXX@gmail.com",
+        "phone": "0000000000",
+        "role": "Startup",
+        "name": "RAUL CLOTHING LLP",
+        "image": "e1c96a67-1649-49c0-9148-424f07333cf9.png",
+        "companyLogo": true,
+        "stateRecognized": null,
+        "migratedUser": false,
+        "coverImage": null,
+        "eventRegId": "OI-0525-9208KX",
+        "gallery": null,
+        "startup": {
+          "name": "RAUL CLOTHING LLP",
+          "startupEntity": "5f48ce5f2a9bb065cdfa185c",
+          "legalName": "RAUL CLOTHING LLP",
+          "cin": "ACL-8756",
+          "pan": "ABKFR7556F",
+          "logo": null,
+          "stage": "Validation",
+          "udyogAadhar": null,
+          "dippCertified": true,
+          "dippNumber": "DIPP203597",
+          "dippRecognitionStatus": "RECOGNISED",
+          "form56Applied": false,
+          "form56Status": null,
+          "form80IacApplied": false,
+          "form80IacStatus": null,
+          "ideaBrief": "Raul Clothing LLP is an innovative online retail platform offering contemporary clothing, fashion accessories, and curated gift items. We connect trend-conscious consumers with quality fashion through a seamless digital shopping experience, blending style and convenience.\n",
+          "members": [],
+          "enabled": false,
+          "funded": false,
+          "location": {
+            "country": {
+              "id": "5f02e38c6f3de87babe20cd2",
+              "name": null,
+              "text": null,
+              "countryName": "India",
+              "deleted": false
+            },
+            "state": {
+              "id": "5f48ce592a9bb065cdf9fb3b",
+              "name": null,
+              "text": null,
+              "stateName": "Tamil Nadu",
+              "deleted": false,
+              "isUnionTerritory": false
+            },
+            "city": {
+              "id": "5f48ce5a2a9bb065cdf9fd7a",
+              "name": null,
+              "text": null,
+              "districtName": "Chennai",
+              "deleted": false,
+              "state": {
+                "id": "5f48ce592a9bb065cdf9fb3b",
+                "name": null,
+                "text": null,
+                "stateName": "Tamil Nadu",
+                "deleted": false,
+                "isUnionTerritory": false
+              },
+              "isActive": true
+            },
+            "cities": null
+          },
+          "focusArea": {
+            "industry": {
+              "id": "5f48ce5f2a9bb065cdfa1746",
+              "name": null,
+              "text": null,
+              "industryName": "Fashion",
+              "orderFlag": 17,
+              "deleted": false
+            },
+            "sectors": [
+              {
+                "id": "5f48ce5f2a9bb065cdfa17cb",
+                "name": null,
+                "text": null,
+                "sectionName": "Apparel",
+                "orderFlag": 59,
+                "deleted": false,
+                "startupIndustry": {
+                  "id": "5f48ce5f2a9bb065cdfa1746",
+                  "name": null,
+                  "text": null,
+                  "industryName": "Fashion",
+                  "orderFlag": 17,
+                  "deleted": false
+                }
+              }
+            ]
+          },
+          "services": [
+            "5f48ce5f2a9bb065cdfa185a"
+          ],
+          "website": "https://www.raulclothing.com/",
+          "mobileAppLink": null,
+          "businessPlan": null,
+          "lookingToConnectTo": [
+            "Startup",
+            "Investor",
+            "Mentor",
+            "Incubator",
+            "Accelerator"
+          ],
+          "linkedInUrl": null,
+          "mentorshipParticipant": false,
+          "mentorship": {
+            "mentorCategory": null,
+            "mentorDomains": null,
+            "mentorMeans": [],
+            "mentorCity": null,
+            "mentorHours": null,
+            "noOfStartupsToMentor": null
+          },
+          "socialInfos": null,
+          "address": null,
+          "interestedArea": null,
+          "startupServices": null,
+          "recognitionFormRequest": null
+        },
+        "switchedUser": false
+      },
+      "points": 40,
+      "numberOfConnection": 0,
+      "connectionStatus": {
+        "connected": false,
+        "connectionAllowed": false,
+        "connectionSent": false,
+        "connectionRecieved": false,
+        "weeklyThresholdReached": false
+      },
+      "createdOn": 1747303548256,
+      "lastUpdatedOn": null,
+      "lastPublishedOn": 1747393118569,
+      "autoEnableOn": null,
+      "disabledOn": null,
+      "rejectedOn": null,
+      "badges": [
+        "CIN_CERTIFIED"
+      ],
+      "assignedBadges": [],
+      "allowProfileEdit": false,
+      "published": false,
+      "passwordKey": false,
+      "eventRegId": "OI-0525-9208KX"
+    },
+    "cin_data": {
+      "status": true,
+      "message": "Valid cin",
+      "data": {
+        "cin": "ACL-8756",
+        "companyName": "RAUL CLOTHING LLP",
+        "companyStatus": "Active",
+        "email": "gokul@raulclothing.com",
+        "financialAuditStatus": "null",
+        "financialDetails": [
+          {
+            "profitLoss": "null",
+            "turnOver": "null",
+            "year": "null"
+          }
+        ],
+        "incorpdate": "05-02-2025",
+        "registeredAddress": "HD-104, WeWork Olympia Cyberspace",
+        "registeredContactNo": "7845920047",
+        "isValidIncorporationNo": true,
+        "message": "MCA details fetched successfully",
+        "status": "true"
+      },
+      "rpCount": 0
+    },
+    "processing_info": {
+      "timestamp": 1749453288.1708055,
+      "success": true,
+      "errors": []
+    }
+  },
+  {
+    "profile_id": "6824ababe4b025b6b8a7b1df",
+    "page": 2,
+    "search_profile_data": {
+      "id": "6824ababe4b025b6b8a7b1df",
+      "name": "SIMSON ELEVATORS PRIVATE LIMITED",
+      "title": null,
+      "pic": "0c629a24-3256-41bb-b817-6014c345162f.jpeg",
+      "companyLogo": true,
+      "role": "Startup",
+      "dippNumber": "DIPP203493",
+      "dippRecognitionStatus": "RECOGNISED",
+      "dippCertified": true,
+      "form56Applied": false,
+      "form56Status": null,
+      "form80IacApplied": false,
+      "form80IacStatus": null,
+      "country": "India",
+      "state": "Tamil Nadu",
+      "city": "Madurai",
+      "industries": [
+        "Construction"
+      ],
+      "sectors": [
+        "Construction & Engineering"
+      ],
+      "level": 0,
+      "stages": [
+        "Prototype"
+      ],
+      "rating": "0.0",
+      "published": true,
+      "disabled": false,
+      "publishedOn": 1747233707489,
+      "registeredOn": 1747233707457,
+      "department": null,
+      "ministry": null,
+      "score": 1.0,
+      "badges": null,
+      "badgeDetails": null
+    },
+    "detailed_profile_data": {
+      "user": {
+        "uniqueId": "6824ababe4b025b6b8a7b1df",
+        "email": "XXXXXXX@gmail.com",
+        "phone": "0000000000",
+        "role": "Startup",
+        "name": "SIMSON ELEVATORS PRIVATE LIMITED",
+        "image": "0c629a24-3256-41bb-b817-6014c345162f.jpeg",
+        "companyLogo": true,
+        "stateRecognized": null,
+        "migratedUser": false,
+        "coverImage": null,
+        "eventRegId": null,
+        "gallery": null,
+        "startup": {
+          "name": "SIMSON ELEVATORS PRIVATE LIMITED",
+          "startupEntity": "5f48ce5f2a9bb065cdfa185b",
+          "legalName": "SIMSON ELEVATORS PRIVATE LIMITED",
+          "cin": "U43291TN2025PTC177807",
+          "pan": "ABPCS5012H",
+          "logo": null,
+          "stage": "Prototype",
+          "udyogAadhar": "614009265637",
+          "dippCertified": true,
+          "dippNumber": "DIPP203493",
+          "dippRecognitionStatus": "RECOGNISED",
+          "form56Applied": false,
+          "form56Status": null,
+          "form80IacApplied": false,
+          "form80IacStatus": null,
+          "ideaBrief": "At Simson Elevators, we are redefining vertical transportation by seamlessly blending cutting-edge technology, energy efficiency, and exceptional customer service. With a deep commitment to innovation and quality, we provide solutions that are not only reliable but also tailored to meet the unique requirements of residential, commercial, and industrial spaces.",
+          "members": null,
+          "enabled": true,
+          "funded": false,
+          "location": {
+            "country": {
+              "id": "5f02e38c6f3de87babe20cd2",
+              "name": null,
+              "text": null,
+              "countryName": "India",
+              "deleted": false
+            },
+            "state": {
+              "id": "5f48ce592a9bb065cdf9fb3b",
+              "name": null,
+              "text": null,
+              "stateName": "Tamil Nadu",
+              "deleted": false,
+              "isUnionTerritory": false
+            },
+            "city": {
+              "id": "5f48ce5a2a9bb065cdf9fd84",
+              "name": null,
+              "text": null,
+              "districtName": "Madurai",
+              "deleted": false,
+              "state": {
+                "id": "5f48ce592a9bb065cdf9fb3b",
+                "name": null,
+                "text": null,
+                "stateName": "Tamil Nadu",
+                "deleted": false,
+                "isUnionTerritory": false
+              },
+              "isActive": true
+            },
+            "cities": null
+          },
+          "focusArea": {
+            "industry": {
+              "id": "5f48ce5f2a9bb065cdfa173d",
+              "name": null,
+              "text": null,
+              "industryName": "Construction",
+              "orderFlag": 11,
+              "deleted": false
+            },
+            "sectors": [
+              {
+                "id": "5f48ce5f2a9bb065cdfa17ac",
+                "name": null,
+                "text": null,
+                "sectionName": "Construction & Engineering",
+                "orderFlag": 28,
+                "deleted": false,
+                "startupIndustry": {
+                  "id": "5f48ce5f2a9bb065cdfa173d",
+                  "name": null,
+                  "text": null,
+                  "industryName": "Construction",
+                  "orderFlag": 11,
+                  "deleted": false
+                }
+              }
+            ]
+          },
+          "services": [
+            "5f48ce5f2a9bb065cdfa184d"
+          ],
+          "website": "https://simsonelevators.com/ ",
+          "mobileAppLink": {
+            "android": "null"
+          },
+          "businessPlan": null,
+          "lookingToConnectTo": [
+            "Investor",
+            "Mentor",
+            "Startup",
+            "Incubator"
+          ],
+          "linkedInUrl": null,
+          "mentorshipParticipant": false,
+          "mentorship": null,
+          "socialInfos": null,
+          "address": null,
+          "interestedArea": null,
+          "startupServices": null,
+          "recognitionFormRequest": {
+            "id": "68401248e4b08462cd042e06",
+            "userId": "6824ababe4b025b6b8a7b1df",
+            "applied": true,
+            "cin": "U43291TN2025PTC177807",
+            "referenceNo": "P140525202719",
+            "reg_id": "6824abb48c985c3e8384221e",
+            "lastAccordionSaved": null,
+            "isUpdatedByScheduler": null,
+            "isCheckedByScheduler": true,
+            "form80id": null,
+            "form56id": null
+          }
+        },
+        "switchedUser": false
+      },
+      "points": 40,
+      "numberOfConnection": 0,
+      "connectionStatus": {
+        "connected": false,
+        "connectionAllowed": false,
+        "connectionSent": false,
+        "connectionRecieved": false,
+        "weeklyThresholdReached": false
+      },
+      "createdOn": 1747233707457,
+      "lastUpdatedOn": null,
+      "lastPublishedOn": 1747233756583,
+      "autoEnableOn": null,
+      "disabledOn": null,
+      "rejectedOn": null,
+      "badges": [
+        "CIN_CERTIFIED"
+      ],
+      "assignedBadges": [],
+      "allowProfileEdit": false,
+      "published": false,
+      "passwordKey": false,
+      "eventRegId": null
+    },
+    "cin_data": {
+      "status": true,
+      "message": "Valid cin",
+      "data": {
+        "cin": "U43291TN2025PTC177807",
+        "companyName": "SIMSON ELEVATORS PRIVATE LIMITED",
+        "companyStatus": "Active",
+        "email": "info@simsonelevators.com",
+        "financialAuditStatus": "null",
+        "financialDetails": [
+          {
+            "profitLoss": "null",
+            "turnOver": "null",
+            "year": "null"
+          }
+        ],
+        "incorpdate": "04-03-2025",
+        "registeredAddress": "NO.D28",
+        "registeredContactNo": "9738442537",
+        "isValidIncorporationNo": true,
+        "message": "MCA details fetched successfully",
+        "status": "true"
+      },
+      "rpCount": 0
+    },
+    "processing_info": {
+      "timestamp": 1749453293.2650595,
+      "success": true,
+      "errors": []
+    }
+  },
+  {
+    "profile_id": "682492d2e4b025b6b8a7ab50",
+    "page": 2,
+    "search_profile_data": {
+      "id": "682492d2e4b025b6b8a7ab50",
+      "name": "RENEWALCREW TECHNOLOGIES PRIVATE LIMITED",
+      "title": null,
+      "pic": "0058aa3a-8aa2-446d-bdaf-eb124dd6a44f.jpg",
+      "companyLogo": true,
+      "role": "Startup",
+      "dippNumber": "DIPP203465",
+      "dippRecognitionStatus": "RECOGNISED",
+      "dippCertified": true,
+      "form56Applied": false,
+      "form56Status": null,
+      "form80IacApplied": false,
+      "form80IacStatus": null,
+      "country": "India",
+      "state": "Tamil Nadu",
+      "city": "Vellore",
+      "industries": [
+        "Food & Beverages"
+      ],
+      "sectors": [
+        "Food Processing"
+      ],
+      "level": 0,
+      "stages": [
+        "Prototype"
+      ],
+      "rating": "0.0",
+      "published": true,
+      "disabled": false,
+      "publishedOn": 1747227346028,
+      "registeredOn": 1747227345999,
+      "department": null,
+      "ministry": null,
+      "score": 1.0,
+      "badges": null,
+      "badgeDetails": null
+    },
+    "detailed_profile_data": {
+      "user": {
+        "uniqueId": "682492d2e4b025b6b8a7ab50",
+        "email": "XXXXXXX@gmail.com",
+        "phone": "0000000000",
+        "role": "Startup",
+        "name": "RENEWALCREW TECHNOLOGIES PRIVATE LIMITED",
+        "image": "0058aa3a-8aa2-446d-bdaf-eb124dd6a44f.jpg",
+        "companyLogo": true,
+        "stateRecognized": null,
+        "migratedUser": false,
+        "coverImage": null,
+        "eventRegId": "OI-0525-9207YA",
+        "gallery": null,
+        "startup": {
+          "name": "RENEWALCREW TECHNOLOGIES PRIVATE LIMITED",
+          "startupEntity": "5f48ce5f2a9bb065cdfa185b",
+          "legalName": "RENEWALCREW TECHNOLOGIES PRIVATE LIMITED",
+          "cin": "U62099TN2025PTC176684",
+          "pan": "AAOCR2863F",
+          "logo": null,
+          "stage": "Prototype",
+          "udyogAadhar": null,
+          "dippCertified": true,
+          "dippNumber": "DIPP203465",
+          "dippRecognitionStatus": "RECOGNISED",
+          "form56Applied": false,
+          "form56Status": null,
+          "form80IacApplied": false,
+          "form80IacStatus": null,
+          "ideaBrief": "Alldine is a campus-focused food ordering and gamification platform designed exclusively for college students. It enables students to pre-order meals for takeaway and dine-in, eliminating long queues and wait times during peak hours. Alldine gamifies the dining experience using DineCoins &mdash; a reward system where students earn coins for every order, referrals, and event participation. These coins can be used to participate in college fests and gaming contests, and later redeemed as digital gold SIPs via our fintech backend.\nThe platform operates on a zero-delivery model, collaborating directly with on-campus food vendors to promote convenience and enhance their business visibility. Alldine also runs a student ambassador program to drive adoption, partnerships, and community engagement within campuses.\nWe aim to redefine the campus dining ecosystem by combining food tech, gamification, and student-centric rewards &mdash; all while creating new digital opportunities for engagement and monetisation within India&rsquo;s $ 2B+ annual college food economy.",
+          "members": [],
+          "enabled": false,
+          "funded": false,
+          "location": {
+            "country": {
+              "id": "5f02e38c6f3de87babe20cd2",
+              "name": null,
+              "text": null,
+              "countryName": "India",
+              "deleted": false
+            },
+            "state": {
+              "id": "5f48ce592a9bb065cdf9fb3b",
+              "name": null,
+              "text": null,
+              "stateName": "Tamil Nadu",
+              "deleted": false,
+              "isUnionTerritory": false
+            },
+            "city": {
+              "id": "5f48ce5a2a9bb065cdf9fd95",
+              "name": null,
+              "text": null,
+              "districtName": "Vellore",
+              "deleted": false,
+              "state": {
+                "id": "5f48ce592a9bb065cdf9fb3b",
+                "name": null,
+                "text": null,
+                "stateName": "Tamil Nadu",
+                "deleted": false,
+                "isUnionTerritory": false
+              },
+              "isActive": true
+            },
+            "cities": null
+          },
+          "focusArea": {
+            "industry": {
+              "id": "5f48ce5f2a9bb065cdfa1748",
+              "name": null,
+              "text": null,
+              "industryName": "Food & Beverages",
+              "orderFlag": 20,
+              "deleted": false
+            },
+            "sectors": [
+              {
+                "id": "5f48ce5f2a9bb065cdfa17de",
+                "name": null,
+                "text": null,
+                "sectionName": "Food Processing",
+                "orderFlag": 78,
+                "deleted": false,
+                "startupIndustry": {
+                  "id": "5f48ce5f2a9bb065cdfa1748",
+                  "name": null,
+                  "text": null,
+                  "industryName": "Food & Beverages",
+                  "orderFlag": 20,
+                  "deleted": false
+                }
+              }
+            ]
+          },
+          "services": [
+            "5f48ce5f2a9bb065cdfa1853",
+            "5f48ce5f2a9bb065cdfa185a"
+          ],
+          "website": "https://alldine.in/",
+          "mobileAppLink": null,
+          "businessPlan": null,
+          "lookingToConnectTo": [
+            "Startup",
+            "Investor",
+            "Mentor",
+            "Incubator",
+            "Accelerator"
+          ],
+          "linkedInUrl": null,
+          "mentorshipParticipant": false,
+          "mentorship": {
+            "mentorCategory": null,
+            "mentorDomains": null,
+            "mentorMeans": [],
+            "mentorCity": null,
+            "mentorHours": null,
+            "noOfStartupsToMentor": null
+          },
+          "socialInfos": null,
+          "address": null,
+          "interestedArea": null,
+          "startupServices": null,
+          "recognitionFormRequest": null
+        },
+        "switchedUser": false
+      },
+      "points": 40,
+      "numberOfConnection": 0,
+      "connectionStatus": {
+        "connected": false,
+        "connectionAllowed": false,
+        "connectionSent": false,
+        "connectionRecieved": false,
+        "weeklyThresholdReached": false
+      },
+      "createdOn": 1747227345999,
+      "lastUpdatedOn": null,
+      "lastPublishedOn": 1749136507589,
+      "autoEnableOn": null,
+      "disabledOn": null,
+      "rejectedOn": null,
+      "badges": [
+        "CIN_CERTIFIED"
+      ],
+      "assignedBadges": [],
+      "allowProfileEdit": false,
+      "published": false,
+      "passwordKey": false,
+      "eventRegId": "OI-0525-9207YA"
+    },
+    "cin_data": {
+      "status": true,
+      "message": "Valid cin",
+      "data": {
+        "cin": "U62099TN2025PTC176684",
+        "companyName": "RENEWALCREW TECHNOLOGIES PRIVATE LIMITED",
+        "companyStatus": "Active",
+        "email": "Renewalcrew04@gmail.com",
+        "financialAuditStatus": "null",
+        "financialDetails": [
+          {
+            "profitLoss": "null",
+            "turnOver": "null",
+            "year": "null"
+          }
+        ],
+        "incorpdate": "04-02-2025",
+        "registeredAddress": "SF NO 101",
+        "registeredContactNo": "9994987546",
+        "isValidIncorporationNo": true,
+        "message": "MCA details fetched successfully",
+        "status": "true"
+      },
+      "rpCount": 0
+    },
+    "processing_info": {
+      "timestamp": 1749453298.3373835,
+      "success": true,
+      "errors": []
+    }
+  },
+  {
+    "profile_id": "68240a13e4b025b6b8a76873",
+    "page": 2,
+    "search_profile_data": {
+      "id": "68240a13e4b025b6b8a76873",
+      "name": "HERTZO INTELLIGENCE",
+      "title": null,
+      "pic": "73f1aba3-db68-4494-9dee-255c2a5e625a.jpg",
+      "companyLogo": false,
+      "role": "Startup",
+      "dippNumber": "DIPP205028",
+      "dippRecognitionStatus": "RECOGNISED",
+      "dippCertified": true,
+      "form56Applied": false,
+      "form56Status": null,
+      "form80IacApplied": false,
+      "form80IacStatus": null,
+      "country": "India",
+      "state": "Tamil Nadu",
+      "city": "Tiruchirappalli",
+      "industries": [
+        "AI"
+      ],
+      "sectors": [
+        "NLP"
+      ],
+      "level": 0,
+      "stages": [
+        "Validation"
+      ],
+      "rating": "0.0",
+      "published": true,
+      "disabled": false,
+      "publishedOn": 1747192339550,
+      "registeredOn": 1747192339522,
+      "department": null,
+      "ministry": null,
+      "score": 1.0,
+      "badges": null,
+      "badgeDetails": null
+    },
+    "detailed_profile_data": {
+      "user": {
+        "uniqueId": "68240a13e4b025b6b8a76873",
+        "email": "XXXXXXX@gmail.com",
+        "phone": "0000000000",
+        "role": "Startup",
+        "name": "HERTZO INTELLIGENCE",
+        "image": "73f1aba3-db68-4494-9dee-255c2a5e625a.jpg",
+        "companyLogo": false,
+        "stateRecognized": null,
+        "migratedUser": false,
+        "coverImage": null,
+        "eventRegId": null,
+        "gallery": null,
+        "startup": {
+          "name": "HERTZO INTELLIGENCE",
+          "startupEntity": "5f48ce5f2a9bb065cdfa185b",
+          "legalName": "HERTZO INTELLIGENCE PRIVATE LIMITED",
+          "cin": "U62011TN2025PTC179686",
+          "pan": null,
+          "logo": null,
+          "stage": "Validation",
+          "udyogAadhar": null,
+          "dippCertified": true,
+          "dippNumber": "DIPP205028",
+          "dippRecognitionStatus": "RECOGNISED",
+          "form56Applied": false,
+          "form56Status": null,
+          "form80IacApplied": false,
+          "form80IacStatus": null,
+          "ideaBrief": "One‑liner mission:\nMaking Entrepreneurship more easily and accessible\nAbout\nThinkLoop, a flagship brand of Hertzo Intelligence Pvt Ltd, was created with the vision to solve real-world business challenges by developing Next-Gen Agentic AI Products and a comprehensive Business Suite. Our innovative solutions empower businesses to enhance efficiency, intelligence, and seamless productivity through advanced AI-driven automation.\nWe focus on Vertical AI Agents to offer hyper-specialised solutions for business-specific needs, Our AI agents are built to think, reason, and act autonomously, solving complex real-world problems while ensuring superior performance, reliability, and scalability.\nVision\n      To revolutionise the way the business world operates through the agentic superpowers of our AI Suite. We are building a future of unstoppable productivity, rock-solid stability, and next-level security.\nCore values: \n1. User‑centricity\n2. Transparency\n3. continuous learning",
+          "members": [],
+          "enabled": false,
+          "funded": false,
+          "location": {
+            "country": {
+              "id": "5f02e38c6f3de87babe20cd2",
+              "name": null,
+              "text": null,
+              "countryName": "India",
+              "deleted": false
+            },
+            "state": {
+              "id": "5f48ce592a9bb065cdf9fb3b",
+              "name": null,
+              "text": null,
+              "stateName": "Tamil Nadu",
+              "deleted": false,
+              "isUnionTerritory": false
+            },
+            "city": {
+              "id": "5f48ce5a2a9bb065cdf9fd91",
+              "name": null,
+              "text": null,
+              "districtName": "Tiruchirappalli",
+              "deleted": false,
+              "state": {
+                "id": "5f48ce592a9bb065cdf9fb3b",
+                "name": null,
+                "text": null,
+                "stateName": "Tamil Nadu",
+                "deleted": false,
+                "isUnionTerritory": false
+              },
+              "isActive": true
+            },
+            "cities": null
+          },
+          "focusArea": {
+            "industry": {
+              "id": "5f48ce5f2a9bb065cdfa1733",
+              "name": null,
+              "text": null,
+              "industryName": "AI",
+              "orderFlag": 14,
+              "deleted": false
+            },
+            "sectors": [
+              {
+                "id": "5f48ce5f2a9bb065cdfa1799",
+                "name": null,
+                "text": null,
+                "sectionName": "NLP",
+                "orderFlag": 9,
+                "deleted": false,
+                "startupIndustry": {
+                  "id": "5f48ce5f2a9bb065cdfa1733",
+                  "name": null,
+                  "text": null,
+                  "industryName": "AI",
+                  "orderFlag": 14,
+                  "deleted": false
+                }
+              }
+            ]
+          },
+          "services": [
+            "5f48ce5f2a9bb065cdfa184f",
+            "5f48ce5f2a9bb065cdfa1853",
+            "5f48ce5f2a9bb065cdfa1848",
+            "5f48ce5f2a9bb065cdfa1858",
+            "5f48ce5f2a9bb065cdfa1856"
+          ],
+          "website": "www.thinkloop.in",
+          "mobileAppLink": null,
+          "businessPlan": null,
+          "lookingToConnectTo": [
+            "Startup",
+            "Investor",
+            "Mentor",
+            "Incubator",
+            "Accelerator"
+          ],
+          "linkedInUrl": null,
+          "mentorshipParticipant": false,
+          "mentorship": {
+            "mentorCategory": null,
+            "mentorDomains": null,
+            "mentorMeans": [],
+            "mentorCity": null,
+            "mentorHours": null,
+            "noOfStartupsToMentor": null
+          },
+          "socialInfos": null,
+          "address": null,
+          "interestedArea": null,
+          "startupServices": null,
+          "recognitionFormRequest": {
+            "id": "684042e5e4b0c230967dec62",
+            "userId": "68240a13e4b025b6b8a76873",
+            "applied": true,
+            "cin": "U62011TN2025PTC179686",
+            "referenceNo": "P260525204290",
+            "reg_id": "68341ef9df53da40391d1aee",
+            "lastAccordionSaved": null,
+            "isUpdatedByScheduler": null,
+            "isCheckedByScheduler": true,
+            "form80id": null,
+            "form56id": null
+          }
+        },
+        "switchedUser": false
+      },
+      "points": 40,
+      "numberOfConnection": 0,
+      "connectionStatus": {
+        "connected": false,
+        "connectionAllowed": false,
+        "connectionSent": false,
+        "connectionRecieved": false,
+        "weeklyThresholdReached": false
+      },
+      "createdOn": 1747192339522,
+      "lastUpdatedOn": null,
+      "lastPublishedOn": 1748846997432,
+      "autoEnableOn": null,
+      "disabledOn": null,
+      "rejectedOn": null,
+      "badges": [
+        "CIN_CERTIFIED"
+      ],
+      "assignedBadges": [],
+      "allowProfileEdit": false,
+      "published": false,
+      "passwordKey": false,
+      "eventRegId": null
+    },
+    "cin_data": {
+      "status": true,
+      "message": "Valid cin",
+      "data": {
+        "cin": "U62011TN2025PTC179686",
+        "companyName": "HERTZO INTELLIGENCE PRIVATE LIMITED",
+        "companyStatus": "Active",
+        "email": "thinkloopai@gmail.com",
+        "financialAuditStatus": "null",
+        "financialDetails": [
+          {
+            "profitLoss": "null",
+            "turnOver": "null",
+            "year": "null"
+          }
+        ],
+        "incorpdate": "23-04-2025",
+        "registeredAddress": "NO: 14/25, TB OPPOSITE",
+        "registeredContactNo": "9361372655",
+        "isValidIncorporationNo": true,
+        "message": "MCA details fetched successfully",
+        "status": "true"
+      },
+      "rpCount": 0
+    },
+    "processing_info": {
+      "timestamp": 1749453303.535908,
+      "success": true,
+      "errors": []
+    }
+  }
+]

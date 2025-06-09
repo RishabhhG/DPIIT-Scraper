@@ -1,0 +1,72 @@
+{
+  "total_profiles": 9,
+  "successful_extractions": 9,
+  "failed_extractions": 0,
+  "profiles_with_cin": 9,
+  "extraction_timestamp": 1749453308.7574587,
+  "sample_contacts": [
+    {
+      "profile_id": "682af2f2e4b0cf6e64878ed9",
+      "company_name": "REDFORD ASTRONIX PRIVATE LIMITED",
+      "email": "",
+      "phone": "",
+      "cin": "U96906TZ2025PTC034666"
+    },
+    {
+      "profile_id": "682ae96ce4b0cf6e648789b6",
+      "company_name": "ARGUS FINTECH PRIVATE LIMITED",
+      "email": "",
+      "phone": "",
+      "cin": "U66190TZ2025PTC034344"
+    },
+    {
+      "profile_id": "682a8c48e4b0cf6e648768a5",
+      "company_name": "THAAL INNOVATIONS PRIVATE LIMITED",
+      "email": "",
+      "phone": "",
+      "cin": "U22208TN2024PTC169382"
+    },
+    {
+      "profile_id": "6829ba4ce4b0cf6e64874f2a",
+      "company_name": "PIAX LIFE PRIVATE LIMITED",
+      "email": "",
+      "phone": "",
+      "cin": "U47912TN2025PTC179253"
+    },
+    {
+      "profile_id": "6825de24e4b025b6b8a80147",
+      "company_name": "UZHAVAN BIOSCIENCES PRIVATE LIMITED",
+      "email": "",
+      "phone": "",
+      "cin": "U20129TZ2025PTC033315"
+    },
+    {
+      "profile_id": "6825bc7ce4b025b6b8a7f068",
+      "company_name": "RAUL CLOTHING LLP",
+      "email": "",
+      "phone": "",
+      "cin": "ACL-8756"
+    },
+    {
+      "profile_id": "6824ababe4b025b6b8a7b1df",
+      "company_name": "SIMSON ELEVATORS PRIVATE LIMITED",
+      "email": "",
+      "phone": "",
+      "cin": "U43291TN2025PTC177807"
+    },
+    {
+      "profile_id": "682492d2e4b025b6b8a7ab50",
+      "company_name": "RENEWALCREW TECHNOLOGIES PRIVATE LIMITED",
+      "email": "",
+      "phone": "",
+      "cin": "U62099TN2025PTC176684"
+    },
+    {
+      "profile_id": "68240a13e4b025b6b8a76873",
+      "company_name": "HERTZO INTELLIGENCE",
+      "email": "",
+      "phone": "",
+      "cin": "U62011TN2025PTC179686"
+    }
+  ]
+}

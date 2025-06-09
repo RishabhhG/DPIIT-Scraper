@@ -3,19 +3,71 @@ import json
 import time
 from typing import List, Dict, Any
 import logging
+from pymongo import MongoClient
+from pymongo.errors import ConnectionFailure, DuplicateKeyError
+from datetime import datetime
+import os
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 class StartupDataExtractor:
-    def __init__(self):
+    def __init__(self, mongo_uri: str = None, db_name: str = "startup_data"):
         self.base_url = "https://api.startupindia.gov.in/sih/api"
         self.session = requests.Session()
         self.session.headers.update({
             'Content-Type': 'application/json',
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
         })
+        
+        # MongoDB configuration
+        self.mongo_uri = mongo_uri or os.getenv('MONGODB_URI', 'mongodb+srv://Rishabh:8080@cluster0.53pnc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+        self.db_name = db_name
+        self.client = None
+        self.db = None
+        self.collections = {
+            'profiles': 'startup_profiles',
+            'summary': 'extraction_summary',
+            'errors': 'extraction_errors'
+        }
+        
+        # Initialize MongoDB connection
+        self._init_mongodb()
+        
+    def _init_mongodb(self):
+        """Initialize MongoDB connection and create collections"""
+        try:
+            self.client = MongoClient(self.mongo_uri, serverSelectionTimeoutMS=5000)
+            # Test connection
+            self.client.admin.command('ping')
+            self.db = self.client[self.db_name]
+            
+            # Create collections if they don't exist
+            for collection_name in self.collections.values():
+                if collection_name not in self.db.list_collection_names():
+                    self.db.create_collection(collection_name)
+            
+            # Create indexes for better query performance
+            self.db[self.collections['profiles']].create_index("profile_id", unique=True)
+            self.db[self.collections['profiles']].create_index("page")
+            self.db[self.collections['profiles']].create_index("processing_info.timestamp")
+            self.db[self.collections['profiles']].create_index("processing_info.success")
+            
+            logger.info(f"Successfully connected to MongoDB: {self.db_name}")
+            
+        except ConnectionFailure as e:
+            logger.error(f"Failed to connect to MongoDB: {e}")
+            raise
+        except Exception as e:
+            logger.error(f"Error initializing MongoDB: {e}")
+            raise
+    
+    def close_connection(self):
+        """Close MongoDB connection"""
+        if self.client:
+            self.client.close()
+            logger.info("MongoDB connection closed")
         
     def get_startup_profiles(self, page: int) -> List[Dict[str, Any]]:
         """
@@ -149,9 +201,66 @@ class StartupDataExtractor:
         
         return ""
     
-    def process_pages(self, start_page: int = 1, end_page: int = 5, delay: float = 1.0) -> List[Dict[str, Any]]:
+    def save_profile_to_mongodb(self, profile_data: Dict[str, Any]) -> bool:
+        """
+        Save individual profile data to MongoDB
+        """
+        try:
+            # Add MongoDB-specific fields
+            profile_data['_id'] = profile_data['profile_id']  # Use profile_id as _id
+            profile_data['created_at'] = datetime.utcnow()
+            profile_data['updated_at'] = datetime.utcnow()
+            
+            # Insert or update the document
+            result = self.db[self.collections['profiles']].replace_one(
+                {'_id': profile_data['profile_id']},
+                profile_data,
+                upsert=True
+            )
+            
+            if result.upserted_id or result.modified_count > 0:
+                logger.info(f"Successfully saved profile {profile_data['profile_id']} to MongoDB")
+                return True
+            else:
+                logger.warning(f"No changes made for profile {profile_data['profile_id']}")
+                return False
+                
+        except DuplicateKeyError:
+            logger.warning(f"Profile {profile_data['profile_id']} already exists, updating...")
+            try:
+                # Update existing document
+                profile_data['updated_at'] = datetime.utcnow()
+                result = self.db[self.collections['profiles']].update_one(
+                    {'_id': profile_data['profile_id']},
+                    {'$set': profile_data}
+                )
+                return result.modified_count > 0
+            except Exception as e:
+                logger.error(f"Error updating profile {profile_data['profile_id']}: {e}")
+                return False
+        except Exception as e:
+            logger.error(f"Error saving profile {profile_data['profile_id']} to MongoDB: {e}")
+            # Save error details
+            self._save_error(profile_data['profile_id'], str(e), 'save_profile')
+            return False
+    
+    def _save_error(self, profile_id: str, error_message: str, operation: str):
+        """Save error information to MongoDB"""
+        try:
+            error_doc = {
+                'profile_id': profile_id,
+                'error_message': error_message,
+                'operation': operation,
+                'timestamp': datetime.utcnow()
+            }
+            self.db[self.collections['errors']].insert_one(error_doc)
+        except Exception as e:
+            logger.error(f"Failed to save error to MongoDB: {e}")
+    
+    def process_pages(self, start_page: int = 1, end_page: int = 5, delay: float = 1.0) -> Dict[str, Any]:
         """
         Process multiple pages and extract all data from all three APIs
+        Save directly to MongoDB instead of returning all data
         
         Args:
             start_page: Starting page number
@@ -159,20 +268,29 @@ class StartupDataExtractor:
             delay: Delay between API calls to avoid rate limiting
         
         Returns:
-            List of complete startup data dictionaries
+            Dictionary with processing statistics
         """
-        all_startup_data = []
+        stats = {
+            'total_profiles': 0,
+            'successful_saves': 0,
+            'failed_saves': 0,
+            'profiles_with_cin': 0,
+            'start_time': datetime.utcnow(),
+            'pages_processed': []
+        }
         
         logger.info(f"Starting data extraction from page {start_page} to {end_page}")
         
         for page in range(start_page, end_page + 1):
             logger.info(f"Processing page {page}")
+            page_stats = {'page': page, 'profiles': 0, 'successful': 0, 'failed': 0}
             
             # Step 1: Get all profile data for this page (1st API)
             profiles = self.get_startup_profiles(page)
             
             if not profiles:
                 logger.warning(f"No profiles found for page {page}")
+                stats['pages_processed'].append(page_stats)
                 continue
             
             # Step 2: Process each profile
@@ -183,6 +301,8 @@ class StartupDataExtractor:
                     continue
                 
                 logger.info(f"Processing profile: {profile_id}")
+                stats['total_profiles'] += 1
+                page_stats['profiles'] += 1
                 
                 # Initialize the complete data structure
                 complete_data = {
@@ -220,6 +340,7 @@ class StartupDataExtractor:
                         if cin_info:
                             complete_data['cin_data'] = cin_info
                             complete_data['processing_info']['success'] = True
+                            stats['profiles_with_cin'] += 1
                             logger.info(f"Successfully collected all data for profile {profile_id}")
                         else:
                             complete_data['processing_info']['errors'].append("Failed to fetch CIN data")
@@ -231,69 +352,90 @@ class StartupDataExtractor:
                     complete_data['processing_info']['errors'].append("Failed to fetch detailed profile data")
                     logger.warning(f"Failed to fetch detailed profile for {profile_id}")
                 
-                # Add to results regardless of success (for debugging purposes)
-                all_startup_data.append(complete_data)
+                # Save to MongoDB immediately
+                if self.save_profile_to_mongodb(complete_data):
+                    stats['successful_saves'] += 1
+                    page_stats['successful'] += 1
+                else:
+                    stats['failed_saves'] += 1
+                    page_stats['failed'] += 1
             
-            logger.info(f"Completed page {page}. Total profiles processed: {len(all_startup_data)}")
+            stats['pages_processed'].append(page_stats)
+            logger.info(f"Completed page {page}. Profiles processed: {page_stats['profiles']}, "
+                       f"Successful saves: {page_stats['successful']}, Failed saves: {page_stats['failed']}")
         
-        return all_startup_data
+        stats['end_time'] = datetime.utcnow()
+        stats['duration'] = (stats['end_time'] - stats['start_time']).total_seconds()
+        
+        return stats
     
-    def save_to_file(self, data: List[Dict[str, Any]], filename: str = "complete_startup_data.json"):
+    def save_summary_to_mongodb(self, stats: Dict[str, Any]):
         """
-        Save collected data to a JSON file
+        Save processing summary to MongoDB
         """
         try:
-            with open(filename, 'w', encoding='utf-8') as f:
-                json.dump(data, f, indent=2, ensure_ascii=False)
-            logger.info(f"Data saved to {filename}")
-        except Exception as e:
-            logger.error(f"Error saving data to file: {e}")
-    
-    def save_summary(self, data: List[Dict[str, Any]], filename: str = "startup_summary.json"):
-        """
-        Save a summary of the collected data
-        """
-        try:
-            summary = {
-                'total_profiles': len(data),
-                'successful_extractions': len([d for d in data if d['processing_info']['success']]),
-                'failed_extractions': len([d for d in data if not d['processing_info']['success']]),
-                'profiles_with_cin': len([d for d in data if d.get('cin_data')]),
-                'extraction_timestamp': time.time(),
-                'sample_contacts': []
+            # Get sample contacts from saved profiles
+            sample_contacts = []
+            cursor = self.db[self.collections['profiles']].find(
+                {'processing_info.success': True, 'cin_data': {'$exists': True, '$ne': {}}},
+                limit=10
+            )
+            
+            for profile in cursor:
+                contact_sample = {
+                    'profile_id': profile['profile_id'],
+                    'company_name': '',
+                    'email': profile.get('cin_data', {}).get('email', ''),
+                    'phone': profile.get('cin_data', {}).get('registeredContactNo', ''),
+                    'cin': ''
+                }
+                
+                # Try to get company name from detailed profile
+                if profile.get('detailed_profile_data', {}).get('user', {}).get('startup', {}).get('name'):
+                    contact_sample['company_name'] = profile['detailed_profile_data']['user']['startup']['name']
+                
+                # Try to get CIN
+                if profile.get('detailed_profile_data', {}).get('user', {}).get('startup', {}).get('cin'):
+                    contact_sample['cin'] = profile['detailed_profile_data']['user']['startup']['cin']
+                
+                sample_contacts.append(contact_sample)
+            
+            # Create summary document
+            summary_doc = {
+                '_id': f"summary_{int(time.time())}",
+                'extraction_stats': stats,
+                'sample_contacts': sample_contacts,
+                'created_at': datetime.utcnow()
             }
             
-            # Add sample contact information
-            for profile in data:
-                if profile['processing_info']['success'] and profile.get('cin_data'):
-                    contact_sample = {
-                        'profile_id': profile['profile_id'],
-                        'company_name': '',
-                        'email': profile['cin_data'].get('email', ''),
-                        'phone': profile['cin_data'].get('registeredContactNo', ''),
-                        'cin': ''
-                    }
-                    
-                    # Try to get company name from detailed profile
-                    if profile.get('detailed_profile_data', {}).get('user', {}).get('startup', {}).get('name'):
-                        contact_sample['company_name'] = profile['detailed_profile_data']['user']['startup']['name']
-                    
-                    # Try to get CIN
-                    if profile.get('detailed_profile_data', {}).get('user', {}).get('startup', {}).get('cin'):
-                        contact_sample['cin'] = profile['detailed_profile_data']['user']['startup']['cin']
-                    
-                    summary['sample_contacts'].append(contact_sample)
-                    
-                    # Limit to first 10 samples
-                    if len(summary['sample_contacts']) >= 10:
-                        break
-            
-            with open(filename, 'w', encoding='utf-8') as f:
-                json.dump(summary, f, indent=2, ensure_ascii=False)
-            logger.info(f"Summary saved to {filename}")
+            # Save summary
+            self.db[self.collections['summary']].insert_one(summary_doc)
+            logger.info("Summary saved to MongoDB")
             
         except Exception as e:
-            logger.error(f"Error saving summary to file: {e}")
+            logger.error(f"Error saving summary to MongoDB: {e}")
+    
+    def get_collection_stats(self) -> Dict[str, Any]:
+        """Get statistics about the MongoDB collections"""
+        try:
+            profiles_count = self.db[self.collections['profiles']].count_documents({})
+            successful_count = self.db[self.collections['profiles']].count_documents(
+                {'processing_info.success': True}
+            )
+            with_cin_count = self.db[self.collections['profiles']].count_documents(
+                {'cin_data': {'$exists': True, '$ne': {}}}
+            )
+            errors_count = self.db[self.collections['errors']].count_documents({})
+            
+            return {
+                'total_profiles_in_db': profiles_count,
+                'successful_profiles': successful_count,
+                'profiles_with_cin_data': with_cin_count,
+                'total_errors': errors_count
+            }
+        except Exception as e:
+            logger.error(f"Error getting collection stats: {e}")
+            return {}
 
 def main():
     """
@@ -303,53 +445,49 @@ def main():
     START_PAGE = 2
     END_PAGE = 2  # Adjust based on your needs
     DELAY_BETWEEN_CALLS = 2.0  # Seconds between API calls
-    OUTPUT_FILE = "complete_startup_data.json"
-    SUMMARY_FILE = "startup_summary.json"
+    
+    # MongoDB configuration
+    MONGODB_URI = os.getenv('MONGODB_URI', 'mongodb+srv://Rishabh:8080@cluster0.53pnc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+    DATABASE_NAME = "startup_data"
     
     # Initialize extractor
-    extractor = StartupDataExtractor()
+    extractor = None
     
     try:
-        # Extract data
-        startup_data = extractor.process_pages(
+        extractor = StartupDataExtractor(mongo_uri=MONGODB_URI, db_name=DATABASE_NAME)
+        
+        # Extract data and save to MongoDB
+        stats = extractor.process_pages(
             start_page=START_PAGE,
             end_page=END_PAGE,
             delay=DELAY_BETWEEN_CALLS
         )
         
         # Display summary
-        successful = len([d for d in startup_data if d['processing_info']['success']])
         logger.info(f"Data extraction completed!")
-        logger.info(f"Total profiles processed: {len(startup_data)}")
-        logger.info(f"Successful extractions: {successful}")
-        logger.info(f"Failed extractions: {len(startup_data) - successful}")
+        logger.info(f"Total profiles processed: {stats['total_profiles']}")
+        logger.info(f"Successfully saved to MongoDB: {stats['successful_saves']}")
+        logger.info(f"Failed saves: {stats['failed_saves']}")
+        logger.info(f"Profiles with CIN data: {stats['profiles_with_cin']}")
+        logger.info(f"Processing duration: {stats['duration']:.2f} seconds")
         
-        if startup_data:
-            # Save complete data
-            extractor.save_to_file(startup_data, OUTPUT_FILE)
-            
-            # Save summary
-            extractor.save_summary(startup_data, SUMMARY_FILE)
-            
-            # Display sample data
-            logger.info("Sample startup data structure:")
-            if len(startup_data) > 0:
-                sample = startup_data[0]
-                logger.info(f"Profile ID: {sample.get('profile_id', 'N/A')}")
-                logger.info(f"Success: {sample['processing_info']['success']}")
-                logger.info(f"Has detailed data: {bool(sample.get('detailed_profile_data'))}")
-                logger.info(f"Has CIN data: {bool(sample.get('cin_data'))}")
-                
-                if sample.get('cin_data'):
-                    logger.info(f"Sample contact - Email: {sample['cin_data'].get('email', 'N/A')}")
-                    logger.info(f"Sample contact - Phone: {sample['cin_data'].get('registeredContactNo', 'N/A')}")
-        else:
-            logger.warning("No startup data was collected")
-    
+        # Save summary to MongoDB
+        extractor.save_summary_to_mongodb(stats)
+        
+        # Display database statistics
+        db_stats = extractor.get_collection_stats()
+        if db_stats:
+            logger.info("Current database statistics:")
+            for key, value in db_stats.items():
+                logger.info(f"  {key}: {value}")
+        
     except KeyboardInterrupt:
         logger.info("Process interrupted by user")
     except Exception as e:
         logger.error(f"Unexpected error: {e}")
+    finally:
+        if extractor:
+            extractor.close_connection()
 
 if __name__ == "__main__":
     main()
